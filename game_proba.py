@@ -47,12 +47,8 @@ while game_running == True:
     print(player['name'] + ' has ' + str(player['health']) + ' health')
     print(' ')
     print(monster['name'] + ' has ' + str(monster['health']) + ' health')
-
-    while new_round == True:
-
-        counter = counter + 1
-        player_won = False
-        monster_won = False
+    first=True
+    if first==True:
         print('''
         Please select action:\r\n
         1) Attack\r\n
@@ -64,8 +60,14 @@ while game_running == True:
         7) User manual\r\n
         8) Exit game
         ''')
-        player_choice = input()
+        first=False
+    while new_round == True:
 
+        counter = counter + 1
+        player_won = False
+        monster_won = False
+
+        player_choice = input()
         if player_choice == '1':
             monster['health'] = monster['health'] - calculate_player_attack()
             if monster['health'] <= 0:
