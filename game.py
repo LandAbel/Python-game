@@ -27,7 +27,7 @@ while game_running == True:
         
     def calculate_player_attack():
         return randint(player['attack_min'], player['attack_max'])
-
+    
     print('---' * 7)
     print('Please enter username:\n')
     player['name'] = input()
@@ -37,17 +37,20 @@ while game_running == True:
     print(' ')
     print(monster['name'] + ' has ' + str(monster['health']) + ' health')
 
+    helper=True
+    if helper == True:
+        print('\n' + '---' * 7)
+        print('Please enter your action:\n')
+        print(' 1) Attack \n 2) Heal\n 3) Extra skill\n 4) Trick skill\n 5) Run\n 6) Show Results\n 7) User manual\n 8) Exit game\n')
+        print('---' * 7)
+        helper=False
+
     while new_round == True:
 
         counter = counter + 1
         player_won = False
         monster_won = False
-
-        print('---' * 7)
-        print('Please select action:')
-        print('---' * 7)
-        print('1) Attack \n 2) Heal\n 3) Extra skill\n 4)  Trick skill\n 5) Run\n 6) Show Results\n 7) User manual\n 8) Exit game\n')
-
+                
         player_choice = input()
 
         if player_choice == '1':
@@ -100,9 +103,7 @@ while game_running == True:
 
         elif player_choice == '6':
             for player_stat in game_results:
-                print(' ')
-                print('Last match won by:', player_stat)
-                print(' ')
+                print('\n Last match won by:', player_stat)
 
         elif player_choice == '7':
             print('If you type 1, your caracter hit the monster after that a monster hit you back.\n If you type 2, your caracter heal hear/himself, but the monster hit you and he get 5 more hp.\n If you type 3, you can choose from the extra skill list.\n If you type 4, you can choose from the trick skill list.\n If you type 5, you can choose from the trap skill list.\n If you type 6, you can see the last match result.\n If you type 7, you can see the user manual.\n If you type 8, you can exit the game.\n')
