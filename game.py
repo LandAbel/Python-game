@@ -29,13 +29,9 @@ while game_running == True:
         return randint(player['attack_min'], player['attack_max'])
 
     print('---' * 7)
-    print('Please enter username:')
-    print(' ')
+    print('Please enter username:\n')
     player['name'] = input()
-    print(' ')
-    print('Welcome in the another world.')
-    print(' ')
-    print('I hope you enjoy the game')
+    print('\n Welcome in the another world.\n I hope you enjoy the game.\n')
     print('---' * 7)
     print(player['name'] + ' has ' + str(player['health']) + ' health')
     print(' ')
@@ -50,22 +46,7 @@ while game_running == True:
         print('---' * 7)
         print('Please select action:')
         print('---' * 7)
-        print('1) Attack')
-        print(' ')
-        print('2) Heal')
-        print(' ')
-        print('3) Extra skill')
-        print(' ')
-        print('4) Trick skill')
-        print(' ')
-        print('5) Run')
-        print(' ')
-        print('6) Show Results')
-        print(' ')
-        print('7) User manual')
-        print(' ')
-        print('8) Exit game')
-        print(' ')
+        print('1) Attack \n 2) Heal\n 3) Extra skill\n 4)  Trick skill\n 5) Run\n 6) Show Results\n 7) User manual\n 8) Exit game\n')
 
         player_choice = input()
 
@@ -97,23 +78,17 @@ while game_running == True:
                     one_time = False 
                     print("You used the extra heal skill.")
                     if one_time2 == True:
-                        print(' ')
-                        print("If you wanna use the other skill press 2.")
-                        print(' ')
+                        print("\n If you wanna use the other skill press 2.\n")
                     
                 elif player_choice2 == '2'and one_time2 == True:
                     monster['health'] = monster['health'] - 50
                     one_time2 = False
                     print("You used the extra damage skill.")
                     if one_time == True:
-                        print(' ')
-                        print(" If you wanna use the other skill press 1.")
-                        print(' ')
+                        print("\n If you wanna use the other skill press 1.\n")
                     
             else:
-                print(' ')
-                print("Sorry you used all the extra skill")
-                print(' ')
+                print("\n Sorry you used all the extra skill.\n")
                   
 
         elif player_choice == '4': 
@@ -130,27 +105,10 @@ while game_running == True:
                 print(' ')
 
         elif player_choice == '7':
-            print('If you type 1, your caracter hit the monster after that a monster hit you back.')
-            print(' ')
-            print('If you type 2, your caracter heal hear/himself, but the monster hit you and he get 5 more hp.')
-            print(' ')
-            print('If you type 3, you can choose from the extra skill list.')
-            print(' ')
-            print('If you type 4, your caracter start running from the monster, but you can get hit by the trap.')
-            print(' ')
-            print('If you type 5, you able to see a previous round stats(winner name, rest of health, and number of round.')
-            print(' ')
-            print('If you type 6, you can see the user manual.')
-            print(' ')
-            print('If you type 7, the game ends automatically.')
-            print(' ')
-            print('If anything not work correctly please send a message to me.')
-            print(' ')
+            print('If you type 1, your caracter hit the monster after that a monster hit you back.\n If you type 2, your caracter heal hear/himself, but the monster hit you and he get 5 more hp.\n If you type 3, you can choose from the extra skill list.\n If you type 4, you can choose from the trick skill list.\n If you type 5, you can choose from the trap skill list.\n If you type 6, you can see the last match result.\n If you type 7, you can see the user manual.\n If you type 8, you can exit the game.\n')
 
         elif player_choice == '8':
-            print(' ')
-            print('Thanks for your time.')
-            print(' ')
+            print('\nThanks for your time.\n')
             new_round = False
             game_running = False
 
@@ -175,11 +133,10 @@ while game_running == True:
             new_round = False
         
     if player_won == True:
-        print(' ')
-        print('Congratulation you destroyed the MONSTER')
+        print('\n Congratulation you destroyed the MONSTER')
 
     if monster_won == True:
-        print(' ')
-        print('Next time might be able to destroy the MONSTER')
+
+        print('\n Next time might be able to destroy the MONSTER')
 
 
