@@ -97,7 +97,7 @@ while game_running == True:
         elif player_choice == '4': 
                 player['health'] = player['health'] - 14 
                 monster['health'] = monster['health'] - calculate_player_attack()
-
+    
         elif player_choice == '5':
             player['health'] = player['health'] - calculated_trap_attack()
 
