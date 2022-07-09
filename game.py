@@ -1,5 +1,5 @@
 from random import randint
-
+from tkinter import *
 game_running = True
 game_results = []
 one_time = True
@@ -140,4 +140,13 @@ while game_running == True:
 
         print('\n Next time might be able to destroy the MONSTER')
 
-
+''' wind=Tk()
+wind.geometry('800x600')
+wind.title('Monster Game')
+wind.configure(background='black')
+label=Label(wind, text='Monster Game', font='Arial 20', bg='black', fg='white')
+label.configure(background='black', fg='white')
+label.pack()
+out=Text(wind,fg = "black",bg="White", cursor="hand", font=("Times New Roman", 16,"bold") ,width=500,height=500, yscrollcommand=True,spacing1=2)
+out.insert(INSERT, 'Welcome to Monster Game\n')
+out.pack(expand=True, fill=BOTH) '''
